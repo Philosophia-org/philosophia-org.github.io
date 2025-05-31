@@ -197,6 +197,18 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
+        /* Desktop - keep privacy footer fixed */
+        @media (min-width: 769px) {
+            .privacy-footer {
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
         /* Tablet breakpoint */
         @media (max-width: 1024px) {
             .container {
@@ -227,7 +239,7 @@
                 gap: 30px;
                 min-height: auto;
                 padding-top: 40px;
-                padding-bottom: 100px;
+                padding-bottom: 20px;
             }
 
             .phone-mockup {
@@ -299,7 +311,10 @@
             }
 
             .privacy-footer {
-                bottom: 15px;
+                position: static;
+                transform: none;
+                margin-top: 30px;
+                padding-bottom: 20px;
             }
         }
 
@@ -309,6 +324,7 @@
                 padding: 15px;
                 gap: 25px;
                 padding-top: 30px;
+                padding-bottom: 15px;
             }
 
             .phone-mockup {
@@ -370,6 +386,13 @@
                 width: 180px;
                 height: 70px;
             }
+
+            .privacy-footer {
+                position: static;
+                transform: none;
+                margin-top: 25px;
+                padding-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -405,11 +428,11 @@
                     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
                 </a>
             </div>
-        </div>
-    </div>
 
-    <div class="privacy-footer">
-        <a href="https://docs.google.com/document/d/1_UMqNR4WB2t8Pw79t1PNnz48P6j_pR1Cujj7hrzvD_Q" class="privacy-link" target="_blank">Privacy Policy</a>
+            <div class="privacy-footer">
+                <a href="https://docs.google.com/document/d/1_UMqNR4WB2t8Pw79t1PNnz48P6j_pR1Cujj7hrzvD_Q" class="privacy-link" target="_blank">Privacy Policy</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
