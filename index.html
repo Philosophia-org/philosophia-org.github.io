@@ -13,117 +13,38 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-            background-image: 
-                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
+            background: radial-gradient(ellipse at center, #1e3c72 0%, #2a5298 35%, #1e3c72 70%, #0f1419 100%);
+            color: white;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 80px;
+            display: flex;
             align-items: center;
-        }
-
-        .content {
-            max-width: 600px;
-        }
-
-        .title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #5a6c7d;
-            margin-bottom: 3rem;
-            line-height: 1.5;
-        }
-
-        .section {
-            margin-bottom: 2.5rem;
-        }
-
-        .section-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .section-description {
-            color: #5a6c7d;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .features {
-            margin-top: 3rem;
-        }
-
-        .features-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-list li {
-            color: #5a6c7d;
-            margin-bottom: 0.5rem;
-            padding-left: 1rem;
-            position: relative;
-        }
-
-        .feature-list li::before {
-            content: "•";
-            color: #3498db;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px;
+            gap: 80px;
         }
 
         .phone-mockup {
             position: relative;
-            width: 280px;
-            height: 560px;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            width: 300px;
+            height: 600px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             border-radius: 35px;
             padding: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
         }
 
         .phone-screen {
             width: 100%;
             height: 100%;
-            background: #1a1a1a;
+            background: #000;
             border-radius: 27px;
             position: relative;
             overflow: hidden;
-        }
-
-        .phone-app-image {
-            width: calc(100% - 10px);
-            height: calc(100% - 20px);
-            object-fit: cover;
-            border-radius: 20px;
-            margin: 10px 5px;
         }
 
         .phone-notch {
@@ -138,110 +59,240 @@
             z-index: 10;
         }
 
-        .footer {
+        .phone-app-image {
+            width: calc(100% - 20px);
+            height: calc(100% - 40px);
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 20px 10px;
+        }
+
+        .app-info {
+            max-width: 500px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .app-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-tagline {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .app-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .app-features {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            width: 180px;
+            height: 60px;
+            /* background: rgba(255, 255, 255, 0.08); */
+            /* border-radius: 12px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            /* border: 1px solid rgba(255, 255, 255, 0.1); */
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .download-btn-v2 {
+            width: 180px;
+            height: 60px;
+            /* background: rgba(255, 255, 255, 0.08); */
+            /* border-radius: 12px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            /* border: 1px solid rgba(255, 255, 255, 0.1); */
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .download-btn:hover {
+            /* background: rgba(255, 255, 255, 0.12); */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .download-btn img {
+            width: 170px;
+            height: 56px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .download-btn-v2 img {
+            width: 205px;
+            height: 85px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        /* Add padding to App Store badge to match Google Play's built-in padding */
+        /* .download-btn.disabled img {
+            padding: 6% 6%;
+            box-sizing: border-box;
+        } */
+
+        .download-btn:hover img {
+            transform: scale(1.02);
+        }
+
+        .download-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .download-btn.disabled:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: none;
+            box-shadow: none;
+        }
+
+        .download-btn.disabled img {
+            transform: none;
+        }
+
+        .privacy-footer {
             position: fixed;
-            bottom: 20px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
         }
 
-        .footer-link {
-            color: #7f8c8d;
+        .privacy-link {
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 14px;
+            transition: color 0.3s ease;
         }
 
-        .footer-link:hover {
-            color: #3498db;
+        .privacy-link:hover {
+            color: rgba(255, 255, 255, 0.8);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .container {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 gap: 40px;
-                padding: 40px 20px;
                 text-align: center;
             }
 
-            .title {
+            .phone-mockup {
+                width: 250px;
+                height: 500px;
+            }
+
+            .app-title {
                 font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
             }
 
             .phone-mockup {
-                width: 240px;
-                height: 480px;
+                width: 200px;
+                height: 400px;
+            }
+
+            .app-title {
+                font-size: 2rem;
+            }
+
+            .app-tagline {
+                font-size: 1.1rem;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                max-width: 250px;
                 margin: 0 auto;
             }
 
-            .footer {
-                position: static;
-                margin-top: 40px;
-                left: auto;
-                transform: none;
+            .download-btn {
+                min-width: unset;
+                width: 100%;
+                height: 50px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <h1 class="title">Philosophia+</h1>
-            <p class="subtitle">
-                Embark on a journey through the world's greatest philosophical wisdom with our comprehensive philosophy companion.
-            </p>
-
-            <div class="section">
-                <h2 class="section-title">Daily Inspiration</h2>
-                <p class="section-description">
-                    Start each day with carefully curated quotes from history's most influential philosophers. From ancient Stoics to modern thinkers, discover profound insights that will enrich your perspective and guide your daily life.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Explore Philosophy Schools</h2>
-                <p class="section-description">
-                    Dive deep into the major philosophical movements that have shaped human thought. Learn about Stoicism, Existentialism, Buddhism, Utilitarianism, and many more. Each school comes with clear explanations, key principles, and historical context.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Meet Great Philosophers</h2>
-                <p class="section-description">
-                    Discover the fascinating lives and revolutionary ideas of philosophy's greatest minds. Read detailed biographies of Aristotle, Kant, Nietzsche, Confucius, and hundreds of other thinkers who changed the world.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Smart Notifications</h2>
-                <p class="section-description">
-                    Never miss your daily dose of wisdom with customizable notifications. Choose your preferred time, frequency, and even specific philosophers or schools you want to hear from.
-                </p>
-            </div>
-
-            <div class="features">
-                <h3 class="features-title">Key Features:</h3>
-                <ul class="feature-list">
-                    <li>Thousands of inspiring philosophical quotes</li>
-                    <li>Comprehensive guide to major philosophy schools</li>
-                    <li>Detailed biographies of influential philosophers</li>
-                    <li>Daily notifications with personalized settings</li>
-                    <li>Clean, intuitive interface designed for contemplation</li>
-                    <li>Offline access to all content</li>
-                </ul>
-            </div>
-        </div>
-
         <div class="phone-mockup">
             <div class="phone-screen">
                 <div class="phone-notch"></div>
                 <img src="images/app_image.png" alt="Philosophia+ App Interface" class="phone-app-image">
             </div>
         </div>
+
+        <div class="app-info">
+            <img src="images/app_icon.png" alt="Philosophia+ Icon" class="app-icon">
+            
+            <h1 class="app-title">Philosophia+</h1>
+            
+            <p class="app-tagline">Daily wisdom from history's greatest minds.</p>
+            
+            <p class="app-description">
+                Start each day with carefully curated quotes from influential philosophers. Explore major philosophical schools, discover great thinkers, and enrich your perspective with profound insights.
+            </p>
+            
+            <p class="app-features">
+                Available for iPhone, iPad, and Mac.
+            </p>
+
+            <div class="download-buttons">
+                <a href="#" class="download-btn disabled">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.vlsch.serenity" class="download-btn-v2" target="_blank">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">
-        <a href="https://docs.google.com/document/d/1_UMqNR4WB2t8Pw79t1PNnz48P6j_pR1Cujj7hrzvD_Q" class="footer-link" target="_blank">Privacy Policy</a>
+    <div class="privacy-footer">
+        <a href="https://docs.google.com/document/d/1_UMqNR4WB2t8Pw79t1PNnz48P6j_pR1Cujj7hrzvD_Q" class="privacy-link" target="_blank">Privacy Policy</a>
     </div>
 </body>
 </html>
